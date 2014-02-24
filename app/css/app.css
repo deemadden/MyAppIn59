@@ -4483,7 +4483,7 @@ th.hide-for-touch {
 body {
   background-color: #65a7df; }
   body .angular-google-map-container {
-    height: 90vh;
+    height: 90vh !important;
     margin: 6px; }
     body .angular-google-map-container img {
       max-width: none;
@@ -4498,7 +4498,7 @@ body {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
   /*CSS Instructions */
   body .angular-google-map-container {
-    height: 468px;
+    height: 468px !important;
     margin: 6px; }
     body .angular-google-map-container img {
       max-width: none;
@@ -4508,27 +4508,45 @@ body {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
   /*CSS Instructions */
   body .angular-google-map-container {
-    height: 308px;
+    height: 308px !important;
     margin: 6px; }
     body .angular-google-map-container img {
       max-width: none;
       height: auto; } }
 
 /* iPhone 5 (portrait) */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation: portrait) {
   /*CSS Instructions */
   body .angular-google-map-container {
-    height: 556px;
+    height: 496px !important;
     margin: 6px; }
     body .angular-google-map-container img {
       max-width: none;
       height: auto; } }
 
 /* iPhone 5 (landscape) */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation: landscape) {
   /*CSS Instructions */
   body .angular-google-map-container {
-    height: 308px;
+    height: 248px !important;
+    margin: 6px; }
+    body .angular-google-map-container img {
+      max-width: none;
+      height: auto; } }
+
+/* Most 16:9 xHdpi Android devices with (portrait) */
+@media screen and (min-width: 0px) and (device-width: 360px) and (max-width: 360px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 45/74) {
+  body .angular-google-map-container {
+    height: 448px !important;
+    margin: 6px; }
+    body .angular-google-map-container img {
+      max-width: none;
+      height: auto; } }
+
+/* Most 16:9 xHdpi Android smartphones (landscape) */
+@media screen and (min-width: 598px) and (device-width: 598px) and (max-width: 598px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 299/180) {
+  body .angular-google-map-container {
+    height: 228px !important;
     margin: 6px; }
     body .angular-google-map-container img {
       max-width: none;
@@ -4544,41 +4562,3 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1600px) and (orientation: portrait) { }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1600px) and (orientation: landscape) { }
-
-/* Moto-G (portrait) */
-@media only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 768px) and (max-device-width: 1280px) and (orientation: portrait) {
-  /*CSS Instructions */
-  body .angular-google-map-container {
-    height: 628px;
-    margin: 6px; }
-    body .angular-google-map-container img {
-      max-width: none;
-      height: auto; } }
-
-/* Moto-G (landscape) */
-@media only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 768px) and (max-device-width: 1280px) and (orientation: landscape) {
-  /*CSS Instructions */
-  body .angular-google-map-container {
-    height: 372px;
-    margin: 6px; }
-    body .angular-google-map-container img {
-      max-width: none;
-      height: auto; } }
-
-.red {
-  color: #f5f5f5;
-  background-color: red; }
-
-.yellow {
-  color: black;
-  background-color: #ffff00; }
-
-.green {
-  color: #f5f5f5;
-  background-color: #008000; }
-
-.window-style {
-  float: left;
-  height: 120px;
-  width: 100%;
-  padding: 5px; }
