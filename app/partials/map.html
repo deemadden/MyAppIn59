@@ -1,0 +1,20 @@
+<div>
+    <div class="row">
+        <google-map center="map.center" zoom="map.zoom" draggable="true">
+            <marker ng-repeat="marker in map.markers" coords="marker.location" click="markerClicked()">
+                <window ng-cloak show="marker.showWindow" >
+                    <div class="window-style {{marker.score | inspectionClass}}">
+                        <p>{{marker.name}} ({{marker.score}})</p>
+                        <p>
+                            {{marker.address.street}}<br />
+                            {{marker.address.city}}, {{marker.address.zip}}<br />
+                        </p>
+                    </div>
+                </window>
+            </marker>
+        </google-map>
+    </div>
+    <div class="row">
+        <button id="re-center" class="button" ng-click="map.reCenter()">Center</button>
+    </div>
+</div>

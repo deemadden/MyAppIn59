@@ -1,0 +1,138 @@
+@import "../app/lib/foundation/scss/foundation.scss";
+
+/* mixins */
+@mixin foundation-google-maps-fix() {
+  img {
+    max-width: none;
+    height: auto
+  }
+}
+
+@mixin angular-map-container-style-with-height($height) {
+  .angular-google-map-container {
+    height: $height;
+    margin: 6px;
+
+    @include foundation-google-maps-fix();
+  }
+}
+
+/* app css stylesheet */
+body {
+  background-color: #65a7df;
+
+  @include angular-map-container-style-with-height(90vh);
+
+  .panel {
+    background-color: #65a7df;
+  }
+}
+
+/*********************************************
+    Responsive styling
+ *********************************************/
+
+//@media screen and (orientation: portrait) {
+//  body {
+//    @include angular-map-container-style-with-height(552px);
+//  }
+//}
+//
+//@media screen and (orientation: landscape) {
+//  body {
+//    @include angular-map-container-style-with-height(304px);
+//  }
+//}
+
+/* iPhone 4 (portrait) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(468px);
+  }
+}
+
+/* iPhone 4 (landscape) */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(308px);
+  }
+}
+
+/* iPhone 5 (portrait) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(556px);
+  }
+}
+
+/* iPhone 5 (landscape) */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(308px);
+  }
+}
+
+/* iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /*CSS Instructions */
+
+}
+
+/* iPads (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /*CSS Instructions */
+
+}
+
+/* Samsung Nexus 10 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1600px) and (orientation : portrait) {
+  /*CSS Instructions */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1600px) and (orientation : landscape) {
+  /*CSS Instructions */
+
+}
+
+/* Moto-G (portrait) */
+@media only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width : 768px) and (max-device-width : 1280px) and (orientation : portrait) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(628px);
+  }
+}
+
+/* Moto-G (landscape) */
+@media only screen and (min--moz-device-pixel-ratio: 2) and (min-device-width: 768px) and (max-device-width: 1280px) and (orientation: landscape) {
+  /*CSS Instructions */
+  body {
+    @include angular-map-container-style-with-height(372px);
+  }
+}
+
+.red {
+  color: #f5f5f5;
+  background-color: red;
+}
+
+.yellow {
+  color: black;
+  background-color: #ffff00;
+}
+
+.green {
+  color: #f5f5f5;
+  background-color: #008000;
+}
+
+.window-style {
+  float: left;
+  height: 120px;
+  width: 100%;
+  padding: 5px;
+}
